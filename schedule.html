@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Service - BlueLine Emergency Plumbing</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <p>🚨 Emergency Plumbing Services Available 24/7 - Call Now: <a href="tel:5552847721">(555) 284-7721</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>BlueLine Plumbing</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html" class="active">Schedule Service</a></li>
+                <li><a href="estimates.html">Cost Estimates</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Schedule Form Section -->
+    <section class="schedule-section">
+        <div class="container">
+            <div class="schedule-header">
+                <h1>Schedule Your Service</h1>
+                <p>Fill out the form below and we'll get back to you shortly to confirm your appointment.</p>
+                
+                <div class="emergency-warning">
+                    <strong>⚠️ EMERGENCY?</strong><br>
+                    If this is an urgent plumbing emergency, please call us immediately at 
+                    <a href="tel:5552847721">(555) 284-7721</a> instead of using this form.
+                </div>
+            </div>
+
+            <div class="form-container">
+                <form id="scheduleForm" class="schedule-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceType">Service Needed *</label>
+                        <select id="serviceType" name="serviceType" required>
+                            <option value="">-- Select a Service --</option>
+                            <option value="Drain Cleaning">Drain Cleaning</option>
+                            <option value="Water Heater Repair">Water Heater Repair</option>
+                            <option value="Pipe Leak Repair">Pipe Leak Repair</option>
+                            <option value="Toilet Installation">Toilet Installation</option>
+                            <option value="Emergency Plumbing">Emergency Plumbing</option>
+                            <option value="General Plumbing">General Plumbing</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Preferred Contact Method *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="contactMethod" value="Phone" required>
+                                <span>Phone</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="contactMethod" value="Email" required>
+                                <span>Email</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preferredDate">Preferred Date *</label>
+                        <input type="date" id="preferredDate" name="preferredDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Description of Issue *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Please describe your plumbing issue in detail..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Submit Request</button>
+                </form>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <h2>✅ Request Submitted Successfully!</h2>
+                    <p>Thank you for choosing BlueLine Emergency Plumbing. We've received your service request and will contact you shortly to confirm your appointment.</p>
+                    <div id="summaryDetails" class="summary-box"></div>
+                    <p class="contact-reminder">For immediate assistance, call us at <a href="tel:5552847721">(555) 284-7721</a></p>
+                    <button onclick="resetForm()" class="btn btn-secondary">Submit Another Request</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>BlueLine Emergency Plumbing</h3>
+                    <p>Professional plumbing services for Metro & surrounding suburbs.</p>
+                    <p class="footer-emergency">Emergency? Call 24/7:<br><a href="tel:5552847721">(555) 284-7721</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="schedule.html">Schedule Service</a></li>
+                        <li><a href="estimates.html">Cost Estimates</a></li>
+                        <li><a href="credentials.html">Credentials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 <a href="tel:5552847721">(555) 284-7721</a></p>
+                    <p>✉️ <a href="mailto:service@bluelineplumbingdemo.com">service@bluelineplumbingdemo.com</a></p>
+                    <p>📍 Serving Metro & Surrounding Suburbs</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Mon-Fri: 7:00 AM - 7:00 PM</p>
+                    <p>Sat: 8:00 AM - 5:00 PM</p>
+                    <p>Sun: 9:00 AM - 3:00 PM</p>
+                    <p><strong>Emergency: 24/7</strong></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlueLine Emergency Plumbing. All rights reserved. | Licensed, Bonded & Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

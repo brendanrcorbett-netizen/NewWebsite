@@ -1,0 +1,966 @@
+/* ==========================================
+   BlueLine Emergency Plumbing - Styles
+   ========================================== */
+
+/* CSS Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-blue: #0066cc;
+    --dark-blue: #004999;
+    --light-blue: #e6f2ff;
+    --emergency-red: #dc3545;
+    --success-green: #28a745;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --gray-light: #f8f9fa;
+    --gray-medium: #dee2e6;
+    --white: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark-blue);
+}
+
+/* ==========================================
+   Emergency Banner
+   ========================================== */
+.emergency-banner {
+    background-color: var(--emergency-red);
+    color: var(--white);
+    text-align: center;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.emergency-banner a {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.emergency-banner a:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================
+   Navigation
+   ========================================== */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 5px var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.logo h2 {
+    color: var(--primary-blue);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-blue);
+    border-bottom-color: var(--primary-blue);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+    color: var(--white);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.emergency-text {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+}
+
+/* ==========================================
+   Buttons
+   ========================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-large {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-blue);
+}
+
+.btn-emergency {
+    background-color: var(--emergency-red);
+    color: var(--white);
+}
+
+.btn-emergency:hover {
+    background-color: #c82333;
+}
+
+/* ==========================================
+   Services Booking Section
+   ========================================== */
+.services-booking {
+    padding: 60px 20px;
+    background-color: var(--gray-light);
+}
+
+.services-booking h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px var(--shadow);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+/* ==========================================
+   Why Choose Us Section
+   ========================================== */
+.why-choose {
+    padding: 60px 20px;
+}
+
+.why-choose h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature h3 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    color: var(--text-light);
+}
+
+/* ==========================================
+   Trust Badges
+   ========================================== */
+.trust-badges {
+    padding: 40px 20px;
+    background-color: var(--light-blue);
+}
+
+.badges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.badge {
+    text-align: center;
+}
+
+.badge-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.badge p {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* ==========================================
+   Schedule Form Section
+   ========================================== */
+.schedule-section {
+    padding: 60px 20px;
+    background-color: var(--gray-light);
+}
+
+.schedule-header {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+}
+
+.schedule-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.emergency-warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.emergency-warning strong {
+    color: var(--emergency-red);
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px var(--shadow);
+}
+
+.schedule-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.schedule-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.schedule-form input,
+.schedule-form select,
+.schedule-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gray-medium);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.schedule-form input:focus,
+.schedule-form select:focus,
+.schedule-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.radio-group {
+    display: flex;
+    gap: 2rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.radio-label input[type="radio"] {
+    width: auto;
+}
+
+.success-message {
+    text-align: center;
+    padding: 2rem;
+}
+
+.success-message h2 {
+    color: var(--success-green);
+    margin-bottom: 1rem;
+}
+
+.summary-box {
+    background-color: var(--gray-light);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.summary-box p {
+    margin-bottom: 0.5rem;
+}
+
+.contact-reminder {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   Estimates Section
+   ========================================== */
+.estimates-section {
+    padding: 60px 20px;
+}
+
+.estimates-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-intro {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1.1rem;
+}
+
+.selected-service-banner {
+    background-color: var(--light-blue);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 3rem;
+    border: 2px solid var(--primary-blue);
+}
+
+.selected-service-banner h2 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pricing-card {
+    background-color: var(--white);
+    border: 2px solid var(--gray-medium);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    border-color: var(--primary-blue);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.pricing-card.featured {
+    border-color: var(--emergency-red);
+    background-color: #fff5f5;
+}
+.pricing-icon {
+font-size: 3rem;
+margin-bottom: 1rem;
+}
+.pricing-card h3 {
+color: var(--text-dark);
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+.price-range {
+font-size: 1.75rem;
+font-weight: 700;
+color: var(--primary-blue);
+margin-bottom: 1.5rem;
+}
+.pricing-details {
+list-style: none;
+margin-bottom: 2rem;
+text-align: left;
+}
+.pricing-details li {
+padding: 0.5rem 0;
+color: var(--text-light);
+border-bottom: 1px solid var(--gray-medium);
+}
+.pricing-details li:last-child {
+border-bottom: none;
+}
+.pricing-disclaimer {
+background-color: var(--gray-light);
+padding: 2rem;
+border-radius: 10px;
+border-left: 4px solid var(--primary-blue);
+}
+.pricing-disclaimer h3 {
+color: var(--primary-blue);
+margin-bottom: 1rem;
+}
+.pricing-disclaimer ul {
+margin: 1rem 0;
+padding-left: 2rem;
+}
+.pricing-disclaimer li {
+margin-bottom: 0.5rem;
+color: var(--text-light);
+}
+.contact-cta {
+margin-top: 1rem;
+font-weight: 600;
+}
+/* ==========================================
+Credentials Section
+========================================== */
+.credentials-section {
+padding: 60px 20px;
+}
+.credentials-section h1 {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+.credentials-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+margin: 3rem 0;
+}
+.credential-card {
+background-color: var(--white);
+border: 2px solid var(--gray-medium);
+border-radius: 10px;
+padding: 2rem;
+transition: all 0.3s ease;
+}
+.credential-card:hover {
+border-color: var(--primary-blue);
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.credential-icon {
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+.credential-card h3 {
+color: var(--primary-blue);
+margin-bottom: 0.5rem;
+}
+.credential-number {
+font-weight: 700;
+font-size: 1.1rem;
+color: var(--text-dark);
+margin-bottom: 1rem;
+}
+.credential-card p {
+color: var(--text-light);
+margin-bottom: 1rem;
+}
+.credential-list {
+list-style: none;
+padding-left: 0;
+}
+.credential-list li {
+padding: 0.5rem 0;
+padding-left: 1.5rem;
+position: relative;
+color: var(--text-light);
+}
+.credential-list li:before {
+content: "✓";
+position: absolute;
+left: 0;
+color: var(--success-green);
+font-weight: bold;
+}
+.why-matters {
+background-color: var(--gray-light);
+padding: 3rem;
+border-radius: 10px;
+margin: 3rem 0;
+}
+.why-matters h2 {
+color: var(--text-dark);
+text-align: center;
+margin-bottom: 2rem;
+}
+.matters-content {
+max-width: 900px;
+margin: 0 auto;
+}
+.matters-text p {
+font-size: 1.1rem;
+margin-bottom: 2rem;
+}
+.protection-points {
+display: grid;
+gap: 2rem;
+}
+.protection-point h4 {
+color: var(--primary-blue);
+margin-bottom: 0.5rem;
+}
+.protection-point p {
+color: var(--text-light);
+}
+.verification-box {
+background-color: var(--light-blue);
+padding: 2rem;
+border-radius: 10px;
+border-left: 4px solid var(--primary-blue);
+margin: 3rem 0;
+}
+.verification-box h3 {
+color: var(--primary-blue);
+margin-bottom: 1rem;
+}
+.verification-box ul {
+margin: 1rem 0;
+padding-left: 2rem;
+}
+.verification-box li {
+margin-bottom: 0.5rem;
+color: var(--text-light);
+}
+.verification-cta {
+margin-top: 1rem;
+font-weight: 600;
+}
+.trust-banner {
+background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+color: var(--white);
+padding: 3rem;
+border-radius: 10px;
+text-align: center;
+}
+.trust-banner h3 {
+font-size: 1.75rem;
+margin-bottom: 1rem;
+}
+.trust-banner p {
+font-size: 1.1rem;
+margin-bottom: 2rem;
+}
+/* ==========================================
+Contact Section
+========================================== */
+.contact-section {
+padding: 60px 20px;
+}
+.contact-section h1 {
+text-align: center;
+font-size: 2.5rem;
+margin-bottom: 1rem;
+}
+.contact-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+margin-top: 3rem;
+}
+.contact-info h2 {
+color: var(--primary-blue);
+margin-bottom: 2rem;
+}
+.contact-method {
+display: flex;
+gap: 1rem;
+margin-bottom: 2rem;
+padding-bottom: 2rem;
+border-bottom: 1px solid var(--gray-medium);
+}
+.contact-method:last-of-type {
+border-bottom: none;
+}
+.contact-icon {
+font-size: 2rem;
+flex-shrink: 0;
+}
+.contact-details h3 {
+color: var(--text-dark);
+margin-bottom: 0.5rem;
+font-size: 1.1rem;
+}
+.contact-details p {
+color: var(--text-light);
+margin-bottom: 0.25rem;
+}
+.contact-note {
+font-size: 0.9rem;
+font-style: italic;
+}
+.emergency-hours {
+color: var(--emergency-red) !important;
+font-weight: 600 !important;
+}
+.emergency-contact-box {
+background-color: #fff5f5;
+border: 2px solid var(--emergency-red);
+padding: 2rem;
+border-radius: 10px;
+text-align: center;
+margin-top: 2rem;
+}
+.emergency-contact-box h3 {
+color: var(--emergency-red);
+margin-bottom: 1rem;
+}
+.emergency-note {
+font-size: 0.9rem;
+margin-top: 1rem;
+color: var(--text-light);
+}
+.contact-form-container {
+background-color: var(--white);
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 2px 10px var(--shadow);
+}
+.contact-form-container h2 {
+color: var(--primary-blue);
+margin-bottom: 1rem;
+}
+.contact-form .form-group {
+margin-bottom: 1.5rem;
+}
+.contact-form label {
+display: block;
+font-weight: 600;
+margin-bottom: 0.5rem;
+color: var(--text-dark);
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+width: 100%;
+padding: 12px;
+border: 1px solid var(--gray-medium);
+border-radius: 5px;
+font-size: 1rem;
+font-family: inherit;
+transition: border-color 0.3s ease;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+outline: none;
+border-color: var(--primary-blue);
+}
+/* ==========================================
+FAQ Section
+========================================== */
+.faq-section {
+padding: 60px 20px;
+background-color: var(--gray-light);
+}
+.faq-section h2 {
+text-align: center;
+font-size: 2rem;
+margin-bottom: 3rem;
+}
+.faq-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+max-width: 1000px;
+margin: 0 auto;
+}
+.faq-item {
+background-color: var(--white);
+padding: 1.5rem;
+border-radius: 10px;
+box-shadow: 0 2px 10px var(--shadow);
+}
+.faq-item h3 {
+color: var(--primary-blue);
+margin-bottom: 0.5rem;
+font-size: 1.1rem;
+}
+.faq-item p {
+color: var(--text-light);
+}
+/* ==========================================
+Footer
+========================================== */
+.footer {
+background-color: var(--text-dark);
+color: var(--white);
+padding: 60px 20px 20px;
+}
+.footer-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+margin-bottom: 2rem;
+}
+.footer-section h3,
+.footer-section h4 {
+color: var(--white);
+margin-bottom: 1rem;
+}
+.footer-section p,
+.footer-section li {
+color: rgba(255, 255, 255, 0.8);
+margin-bottom: 0.5rem;
+}
+.footer-section a {
+color: rgba(255, 255, 255, 0.8);
+transition: color 0.3s ease;
+}
+.footer-section a:hover {
+color: var(--white);
+}
+.footer-section ul {
+list-style: none;
+}
+.footer-emergency {
+margin-top: 1rem;
+padding-top: 1rem;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-emergency a {
+font-size: 1.25rem;
+font-weight: 700;
+color: var(--white);
+}
+.footer-bottom {
+text-align: center;
+padding-top: 2rem;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-bottom p {
+color: rgba(255, 255, 255, 0.6);
+}
+/* ==========================================
+Responsive Design
+========================================== */
+@media (max-width: 768px) {
+.hamburger {
+display: flex;
+}
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 5px 10px var(--shadow);
+}
+
+.nav-menu.active {
+    display: flex;
+}
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+.hero-cta {
+    flex-direction: column;
+}
+
+.service-grid,
+.features-grid,
+.pricing-grid,
+.credentials-grid {
+    grid-template-columns: 1fr;
+}
+
+.contact-grid {
+    grid-template-columns: 1fr;
+}
+
+.form-row {
+    grid-template-columns: 1fr;
+}
+
+.footer-grid {
+    grid-template-columns: 1fr;
+}
+}
+/* ==========================================
+Animations
+========================================== */
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.service-card,
+.feature,
+.pricing-card,
+.credential-card {
+animation: fadeIn 0.6s ease-out;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueLine Emergency Plumbing - 24/7 Service</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <p>🚨 Emergency Plumbing Services Available 24/7 - Call Now: <a href="tel:5552847721">(555) 284-7721</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>BlueLine Plumbing</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="schedule.html">Schedule Service</a></li>
+                <li><a href="estimates.html">Cost Estimates</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Professional Plumbing Services You Can Trust</h1>
+            <p class="hero-subtitle">Serving Metro & Surrounding Suburbs Since 2010</p>
+            <div class="hero-cta">
+                <a href="tel:5552847721" class="btn btn-primary btn-large">
+                    📞 Call (555) 284-7721
+                </a>
+                <a href="schedule.html" class="btn btn-secondary btn-large">
+                    Schedule Service
+                </a>
+            </div>
+            <p class="emergency-text">
+                <strong>Plumbing emergency? Call now for immediate service.</strong><br>
+                Available 24 hours a day, 7 days a week
+            </p>
+        </div>
+    </section>
+
+    <!-- Book Your Service -->
+    <section class="services-booking">
+        <div class="container">
+            <h2>Book Your Service</h2>
+            <p class="section-subtitle">Select a service to get started with your free estimate</p>
+            
+            <div class="service-grid">
+                <div class="service-card" data-service="drain-cleaning">
+                    <div class="service-icon">🚰</div>
+                    <h3>Drain Cleaning</h3>
+                    <p>Clogged drains? Fast, effective cleaning for all types of blockages.</p>
+                    <button class="btn btn-primary" onclick="bookService('Drain Cleaning')">Get Estimate</button>
+                </div>
+
+                <div class="service-card" data-service="water-heater">
+                    <div class="service-icon">🔥</div>
+                    <h3>Water Heater Repair</h3>
+                    <p>No hot water? We repair and replace all water heater models.</p>
+                    <button class="btn btn-primary" onclick="bookService('Water Heater Repair')">Get Estimate</button>
+                </div>
+
+                <div class="service-card" data-service="pipe-leak">
+                    <div class="service-icon">💧</div>
+                    <h3>Pipe Leak Repair</h3>
+                    <p>Leaking pipes can cause serious damage. We fix it fast.</p>
+                    <button class="btn btn-primary" onclick="bookService('Pipe Leak Repair')">Get Estimate</button>
+                </div>
+
+                <div class="service-card" data-service="toilet-installation">
+                    <div class="service-icon">🚽</div>
+                    <h3>Toilet Installation</h3>
+                    <p>Professional toilet installation and repair services.</p>
+                    <button class="btn btn-primary" onclick="bookService('Toilet Installation')">Get Estimate</button>
+                </div>
+
+                <div class="service-card" data-service="emergency-plumbing">
+                    <div class="service-icon">🚨</div>
+                    <h3>Emergency Plumbing</h3>
+                    <p>24/7 emergency service for urgent plumbing issues.</p>
+                    <button class="btn btn-primary" onclick="bookService('Emergency Plumbing')">Get Estimate</button>
+                </div>
+
+                <div class="service-card" data-service="general-plumbing">
+                    <div class="service-icon">🔧</div>
+                    <h3>General Plumbing</h3>
+                    <p>All other plumbing services and routine maintenance.</p>
+                    <button class="btn btn-primary" onclick="bookService('General Plumbing')">Get Estimate</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="container">
+            <h2>Why Choose BlueLine Plumbing?</h2>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>Emergency services available 24/7 with rapid response times to minimize damage.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">👨‍🔧</div>
+                    <h3>Licensed Experts</h3>
+                    <p>All technicians are fully licensed, bonded, and insured professionals.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">💰</div>
+                    <h3>Upfront Pricing</h3>
+                    <p>No hidden fees. You'll know the cost before we start any work.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">✅</div>
+                    <h3>Guaranteed Work</h3>
+                    <p>We stand behind our work with comprehensive warranties on all services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-grid">
+                <div class="badge">
+                    <div class="badge-icon">🏆</div>
+                    <p>Licensed & Certified</p>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <p>Fully Insured</p>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">✓</div>
+                    <p>Bonded Professionals</p>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⭐</div>
+                    <p>5-Star Rated</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>BlueLine Emergency Plumbing</h3>
+                    <p>Professional plumbing services for Metro & surrounding suburbs.</p>
+                    <p class="footer-emergency">Emergency? Call 24/7:<br><a href="tel:5552847721">(555) 284-7721</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="schedule.html">Schedule Service</a></li>
+                        <li><a href="estimates.html">Cost Estimates</a></li>
+                        <li><a href="credentials.html">Credentials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 <a href="tel:5552847721">(555) 284-7721</a></p>
+                    <p>✉️ <a href="mailto:service@bluelineplumbingdemo.com">service@bluelineplumbingdemo.com</a></p>
+                    <p>📍 Serving Metro & Surrounding Suburbs</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Mon-Fri: 7:00 AM - 7:00 PM</p>
+                    <p>Sat: 8:00 AM - 5:00 PM</p>
+                    <p>Sun: 9:00 AM - 3:00 PM</p>
+                    <p><strong>Emergency: 24/7</strong></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlueLine Emergency Plumbing. All rights reserved. | Licensed, Bonded & Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

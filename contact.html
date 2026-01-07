@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BlueLine Emergency Plumbing</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <p>🚨 Emergency Plumbing Services Available 24/7 - Call Now: <a href="tel:5552847721">(555) 284-7721</a></p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <h2>BlueLine Plumbing</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="schedule.html">Schedule Service</a></li>
+                <li><a href="estimates.html">Cost Estimates</a></li>
+                <li><a href="credentials.html">Credentials</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h1>Contact BlueLine Plumbing</h1>
+            <p class="section-intro">Have questions? Need a quote? Get in touch with us using any of the methods below.</p>
+
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p><a href="tel:5552847721">(555) 284-7721</a></p>
+                            <p class="contact-note">Available 24/7 for emergencies</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:service@bluelineplumbingdemo.com">service@bluelineplumbingdemo.com</a></p>
+                            <p class="contact-note">We respond within 24 hours</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Service Area</h3>
+                            <p>Metro & Surrounding Suburbs</p>
+                            <p class="contact-note">Serving the entire metropolitan area</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-method">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h3>Business Hours</h3>
+                            <p><strong>Monday - Friday:</strong> 7:00 AM - 7:00 PM</p>
+                            <p><strong>Saturday:</strong> 8:00 AM - 5:00 PM</p>
+                            <p><strong>Sunday:</strong> 9:00 AM - 3:00 PM</p>
+                            <p class="emergency-hours"><strong>Emergency Services: 24/7/365</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="emergency-contact-box">
+                        <h3>🚨 Emergency?</h3>
+                        <p>For urgent plumbing emergencies, call us immediately:</p>
+                        <a href="tel:5552847721" class="btn btn-emergency btn-large">(555) 284-7721</a>
+                        <p class="emergency-note">Our emergency team is standing by 24/7</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out this form for non-urgent inquiries and we'll get back to you soon.</p>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Name *</label>
+                            <input type="text" id="contactName" name="contactName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email *</label>
+                            <input type="email" id="contactEmail" name="contactEmail" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactPhone">Phone</label>
+                            <input type="tel" id="contactPhone" name="contactPhone" placeholder="(555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" name="contactSubject" required>
+                                <option value="">-- Select a Subject --</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Request Quote">Request Quote</option>
+                                <option value="Schedule Service">Schedule Service</option>
+                                <option value="Billing Question">Billing Question</option>
+                                <option value="Feedback">Feedback</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="6" required placeholder="Tell us how we can help..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="contactSuccess" class="success-message" style="display: none;">
+                        <h3>✅ Message Sent!</h3>
+                        <p>Thank you for contacting BlueLine Emergency Plumbing. We've received your message and will respond shortly.</p>
+                        <button onclick="resetContactForm()" class="btn btn-secondary">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>Do you offer emergency services?</h3>
+                    <p>Yes! We provide 24/7 emergency plumbing services. Call (555) 284-7721 anytime, day or night.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What areas do you serve?</h3>
+                    <p>We serve the entire Metro area and surrounding suburbs. Call us to confirm service in your specific location.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Are you licensed and insured?</h3>
+                    <p>Absolutely. We're fully licensed, bonded, and insured. See our <a href="credentials.html">Credentials page</a> for details.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you provide free estimates?</h3>
+                    <p>Yes! We provide free, no-obligation estimates for all services. You'll know the cost before we begin any work.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What payment methods do you accept?</h3>
+                    <p>We accept cash, checks, and all major credit cards. Payment is due upon completion of service.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you guarantee your work?</h3>
+                    <p>Yes. All our work is guaranteed with comprehensive warranties. We stand behind every job we complete.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>BlueLine Emergency Plumbing</h3>
+                    <p>Professional plumbing services for Metro & surrounding suburbs.</p>
+                    <p class="footer-emergency">Emergency? Call 24/7:<br><a href="tel:5552847721">(555) 284-7721</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="schedule.html">Schedule Service</a></li>
+                        <li><a href="estimates.html">Cost Estimates</a></li>
+                        <li><a href="credentials.html">Credentials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>📞 <a href="tel:5552847721">(555) 284-7721</a></p>
+                    <p>✉️ <a href="mailto:service@bluelineplumbingdemo.com">service@bluelineplumbingdemo.com</a></p>
+                    <p>📍 Serving Metro & Surrounding Suburbs</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Mon-Fri: 7:00 AM - 7:00 PM</p>
+                    <p>Sat: 8:00 AM - 5:00 PM</p>
+                    <p>Sun: 9:00 AM - 3:00 PM</p>
+                    <p><strong>Emergency: 24/7</strong></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 BlueLine Emergency Plumbing. All rights reserved. | Licensed, Bonded & Insured</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
